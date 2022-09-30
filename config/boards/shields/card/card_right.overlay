@@ -7,5 +7,5 @@
 #include "card.dtsi"
 
 &default_transform {
-	col-offset = <13>;
+	col-offset = <18>;
 };
