@@ -4,8 +4,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "card.dtsi"
-
-&default_transform {
-	col-offset = <18>;
-};
+#include "skully.dtsi"

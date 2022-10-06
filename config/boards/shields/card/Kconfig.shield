@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_SKULLY_LEFT
-	def_bool $(shields_list_contains,card_left)
+	def_bool $(shields_list_contains,skully_left)
 
 config SHIELD_SKULLY_RIGHT
-	def_bool $(shields_list_contains,card_right)
+	def_bool $(shields_list_contains,skully_right)
 
 config SHIELD_SKULLY_DONGLE
-	def_bool $(shields_list_contains,card_dongle)
+	def_bool $(shields_list_contains,skully_dongle)

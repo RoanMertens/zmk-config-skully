@@ -8,6 +8,6 @@ exposes: [i2c_oled]
 features:
   - keys
 siblings:
-  - card_left
-  - card_right
-  - card_dongle
+  - skully_left
+  - skully_right
+  - skully_dongle
