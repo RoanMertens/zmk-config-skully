@@ -1,8 +1,8 @@
 file_format: "1"
-id: card
-name: The Card 
+id: skully
+name: The Skully 
 type: shield
-url: https://github.com/benvallack/zmk-config-card
+url: https://github.com/roanmertens/zmk-config-skully
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
