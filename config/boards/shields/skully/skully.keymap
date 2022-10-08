@@ -6,67 +6,50 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
-
-
-&mt {
-  tapping-term-ms = <201>;
-  flavor = "tap-preferred";
-};
-&sk {
-  release-after-ms = <2000>;
-  quick-release;
-};
 
 /* Layers */
 #define ALPHA 0
 #define SYMBOLS 1
 #define NAVIGATION 2
-
 / { 
-  behaviors {
-    hm: homerow_mods {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS";
-          #binding-cells = <2>;
-          tapping-term-ms = <300>;
-          quick_tap_ms = <0>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
   };
+     keymap {
+              compatible = "zmk,keymap";
 
-  keymap {
-    compatible = "zmk,keymap";
+              alpha {
+              bindings = <
+              &kp Q   &kp W       &kp E       &kp R           &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P
+              &kp A   &hm LCTL S  &hm LALT D  &hm RGUI F      &kp G           &kp H     &hm RGUI J  &hm RALT K  &hm RCTL L  &kp SEMI
+              &kp Z   &kp X       &kp C       &kp V           &kp B           &kp N     &kp M       &kp COMMA   &kp DOT     &kp SLASH
+                                  &none       &hm TAB LSHIFT  &kp SPC         &kp BKSP  &kp RET     &to SYMBOLS
+              >;
+              };
+              symbols {
+              bindings = <
+              &kp EXCL    &kp AT      &kp POUND       &kp DLLR          &kp PRCNT       &kp CARET   &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR
+              &kp ESC     &kp LCTL    &hm LALT GRAVE  &hm RGUI APOS     &kp DQT         &kp LBRC    &hm RGUI RBRC   &hm RALT LBKT   &hm RCTL RBKT   &kp COLON
+              &kp TILDE   &kp UNDER   &kp PLUS        &kp MINUS         &kp KP_EQUAL    &kp PIPE    &kp BSLH        &kp LT          &kp GT          &kp QMARK
+                                      &to ALPHA       &to NAVIGATION    &trans          &trans      &trans          &none
+              >;
+              };
+              navigation {
+              bindings = <
+              &trans    &kp N7  &kp N8     &kp N9  &trans        &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_DN  &kp C_BRI_UP
+              &trans    &kp N4  &kp N5     &kp N6  &trans        &kp LEFT       &kp DOWN      &kp UP      &kp RIGHT     &trans
+              &kp N0    &kp N1  &kp N2     &kp N3  &trans        &trans         &trans        &trans      &trans        &trans
+                                &to ALPHA  &none   &trans        &kp BKSP       &trans        &SYMBOLS
+              >;
+              };
 
-    alpha {
-      bindings = <
-        &kp Q   &kp W       &kp E       &kp R           &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P
-        &kp A   &hm LCTL S  &hm LALT D  &hm RGUI F      &kp G           &kp H     &hm RGUI J  &hm RALT K  &hm RCTL L  &kp SEMI
-        &kp Z   &kp X       &kp C       &kp V           &kp B           &kp N     &kp M       &kp COMMA   &kp DOT     &kp SLASH
-                            &none       &hm TAB LSHIFT  &kp SPC         &kp BKSP  &kp RET     &to SYMBOLS
-        >;
-    };
-
-    symbols {
-      bindings = <
-        &kp EXCL    &kp AT      &kp POUND       &kp DLLR          &kp PRCNT       &kp CARET   &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR
-        &kp ESC     &kp LCTL    &hm LALT GRAVE  &hm RGUI APOS     &kp DQT         &kp LBRC    &hm RGUI RBRC   &hm RALT LBKT   &hm RCTL RBKT   &kp COLON
-        &kp TILDE   &kp UNDER   &kp PLUS        &kp MINUS         &kp KP_EQUAL    &kp PIPE    &kp BSLH        &kp LT          &kp GT          &kp QMARK
-                                &to ALPHA       &to NAVIGATION    &trans          &trans      &trans          &none
-        >;
-    };
-
-    navigation {
-      bindings = <
-        &trans    &kp N7  &kp N8     &kp N9  &trans        &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_DN  &kp C_BRI_UP
-        &trans    &kp N4  &kp N5     &kp N6  &trans        &kp LEFT       &kp DOWN      &kp UP      &kp RIGHT     &trans
-        &kp N0    &kp N1  &kp N2     &kp N3  &trans        &trans         &trans        &trans      &trans        &trans
-                          &to ALPHA  &none   &trans          &kp BKSP    &trans     &SYMBOLS
-
-        >;
-    };
-
-  };
+        };
 };
