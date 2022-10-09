@@ -47,7 +47,7 @@
               &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
               &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
               &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
-                              &to AL1   &none   &trans    &kp BKSP  &trans  &SYM1
+                              &to AL1   &trans  &trans    &kp BKSP  &trans  &SYM1
               >;
               };
 
