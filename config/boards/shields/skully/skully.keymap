@@ -44,10 +44,10 @@
               };
               navigation1 {
               bindings = <
-              &trans    &kp N7  &kp N8      &kp N9  &trans        &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_DN  &kp C_BRI_UP
-              &trans    &kp N4  &kp N5      &kp N6  &trans        &kp LEFT       &kp DOWN      &kp UP      &kp RIGHT     &trans
-              &kp N0    &kp N1  &kp N2      &kp N3  &trans        &trans         &trans        &trans      &trans        &trans
-                                &to AL1     &none   &trans        &kp BKSP       &trans        &SYM1
+              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans    &trans  &trans  &trans
               >;
               };
 
