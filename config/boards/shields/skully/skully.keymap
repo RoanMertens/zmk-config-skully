@@ -44,10 +44,10 @@
               };
               navigation1 {
               bindings = <
-              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-              &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
+              &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
+              &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
+              &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans  &trans  &trans
+                              &to AL1   &none   &trans    &kp BKSP  &trans  &SYM1
               >;
               };
 
