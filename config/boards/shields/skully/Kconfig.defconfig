@@ -7,28 +7,9 @@ config ZMK_BLE
 config ZMK_USB
 	default y
 
-if SHIELD_SKULLY_DONGLE
-
-config ZMK_KEYBOARD_NAME
-	default "Skully Dongle"
-
-endif
-
 if SHIELD_SKULLY_LEFT || SHIELD_SKULLY_RIGHT
 
 config ZMK_SPLIT
-	default y
-
-endif
-
-
-
-if SHIELD_SKULLY_DONGLE
-
-config ZMK_SPLIT
-	default y
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
 endif
